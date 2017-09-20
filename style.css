@@ -1,0 +1,38 @@
+
+
+body {
+  background-image: url("images/white_bg.png");
+}
+
+.about {
+  font-family: 'Rokkitt', serif;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 45px;
+  margin-top: -2px;
+  margin-bottom: 0;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.self {
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px grey;
+  width: 270px;
+  margin-top: 10px;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+  border: none;
+  width: 100px; 
+}
