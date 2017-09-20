@@ -4,21 +4,120 @@
     <meta charsets='utf-8'>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Rokkitt" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="prism-atom-dark.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
   </head>
 
   <body>
-    <div class="about">
-      <img src="images/self.jpg" class="self" />
-      <h1>Tanner Levine</h1>
-
-      <h2>Web Developer + Software Engineer</h2>
-
-      <hr />
-
-      <p>Tanner Levine is a person.</p>
-
+    <div class="about-container">
+      <div class="about">
+        <img src="images/self.jpg" class="self" />
+        <h1>Tanner Levine</h1>
+        <h2>Web Developer + Software Engineer</h2>
+        <hr />
+        <p>Tanner Levine is a person.</p>
+      </div>
     </div>
 
+    <h3>Code Snippets</h3>
+    <hr />
+
+    <div class="box">
+      <h4>Finding a Collatz Sequence</h4>
+      <p>
+        This snippet is a function that returns the complete Collatz Sequence for a given number (num).
+      </p>
+
+  <pre><code class="language-ruby">def collatz(num, array = [num])
+  if num == 1
+    array
+  else
+    if num % 2 == 0
+      num = num / 2
+    else
+      num = 3 * num + 1
+    end
+  array &lt;&lt; num
+  collatz(num, array)
+  end
+end</code></pre>
+    </div>
+
+    <div class="box">
+      <h4>Depth First Binary Tree Search</h4>
+      <p>
+        This snippet is a function that searches a Binary Tree for a given value (search_param).
+      </p>
+
+      <pre><code class="language-ruby">def depth_first(node, search_param)
+  puts node.payload
+  if node.payload == search_param
+    return node.payload
+  else
+    node.children.each do |child|
+      value = depth_first(child)
+      if value == 11
+        return value
+      end
+    end
+  end
+end</code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Palindrome Check</h4>
+      <p>
+        This snippet is a function that determines whether a string is a palindrome or not.
+      </p>
+
+<pre><code class="language-ruby">def palindrome?( some_string )
+  _palindrome?( some_string, 0, some_string.length - 1 )
+end
+
+def _palindrome?( some_string, head_index, tail_index )
+  if head_index == tail_index || head_index + 1 == tail_index && some_string[head_index] == some_string[tail_index]
+    true 
+  else
+    if some_string[head_index] == some_string[tail_index]
+      _palindrome?(some_string, head_index + 1, tail_index - 1)
+    else
+      false
+    end
+  end 
+end</code></pre>
+    </div>
+
+    <div class="box">
+      <h4>Instantiating a Class Object</h4>
+      <p>
+        This snippet is a class that instantiates a new object of a person's first and last name.
+      </p>
+
+<pre><code class="language-ruby">class Person
+  attr_accessor :first_name, :last_name
+
+  def initialize(first_name, last_name)
+    @first_name = first_name
+    @last_name = last_name
+  end
+
+  def full_name
+    "#{@first_name} #{@last_name}"
+  end
+end</code></pre>
+    </div>
+
+    <br class="clear" />
 
 
   </body>
