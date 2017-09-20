@@ -15,6 +15,7 @@ body {
 
 .about {
   width: 500px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -32,7 +33,7 @@ body {
 }
 
 .about p {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .self {
@@ -61,7 +62,7 @@ h3 {
   float: left;
   width: 42.5%;
   margin-left: 5%;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 h4 {
@@ -72,5 +73,62 @@ h4 {
 }
 
 p {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.third-box {
+  float: left;
+  width: 26.6666%;
+  margin-left: 5%;
+  margin-top: 40px;
+}
+
+.list {
+  align-content: center;
+}
+
+.contact {
+  height: 350px;
+  background-color: #202020;
+}
+
+.contact-headline {
+  color: white;
+  font-family: 'Rock Salt', cursive;
+  padding-top: 30px;
+}
+
+.white {
+  background-color: white;
+  color: white;
+}
+
+.contact-link {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 30px;
+}
+
+.nav {
+  background-color: #202020;
+  height: 70px;
   text-align: center;
 }
