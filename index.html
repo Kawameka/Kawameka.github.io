@@ -1,9 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
   <head>
     <meta charsets='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Rokkitt" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
     <link
       rel="stylesheet"
@@ -20,27 +26,62 @@
   </head>
 
   <body>
-    <div class="about-container">
-      <div class="nav">
-        <ul>
-          <li><a href="#about" class="nav-link">ABOUT</a></li>
-          <li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
-          <li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
-          <li><a href="#languages" class="nav-link">LANGUAGES &amp; TOOLS</a></li>
-          <li><a href="#contact" class="nav-link">CONTACT ME</a></li>
-        </ul>
-      </div>
+    <nav class="navbar fixed-top justify-content-center" style="background-color: black;">
+      <ul>
+        <li class="nav-item"><a href="#about" class="nav-link">ABOUT ME</a></li>
+        <li class="nav-item"><a href="#languages" class="nav-link">LANGUAGES &amp; TOOLS</a></li>
+        <li class="nav-item"><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">PROJECTS</a></li>
+        
+        <li class="nav-item"><a href="#contact" class="nav-link">CONTACT ME</a></li>
+      </ul>
+    </nav>
 
-      <div class="about" id="about">
+    <div class="empty" id="about"></div>
+
+    <div class="about-container">
+      <div class="about">
         <img src="images/self.jpg" class="self" />
         <h1>Tanner Levine</h1>
-        <h2>Web Developer + Software Engineer</h2>
+        <h2 class="red">Web Developer + Software Engineer</h2>
         <hr />
         <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
       </div>
     </div>
 
-    <h3 id="code-samples">Code Snippets</h3>
+    <div class="empty" id="languages"></div>
+
+    <h3>Languages, Frameworks, &amp; Tools</h3>
+    <hr />
+
+    <div class="third-box">
+      <h4>Languages</h4>
+      <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
+      <p><i class="devicon-javascript-plain colored"></i> Javascript</p>
+      <p><i class="devicon-html5-plain colored"></i> HTML 5</p>
+      <p><i class="devicon-css3-plain colored"></i> CSS 3</p>
+      <p><i class="devicon-csharp-plain colored"></i> C#</p>
+    </div>
+
+    <div class="third-box">
+      <h4>Frameworks</h4>
+      <p><i class="devicon-rails-plain colored"></i> Ruby on Rails</p>
+      <p><i class="devicon-angularjs-plain colored"></i> Angular 4</p>
+      <p><i class="devicon-nodejs-plain colored"></i> Node.js</p>
+    </div>
+
+    <div class="third-box">
+      <h4>Tools</h4>
+      <p><i class="devicon-git-plain colored"></i> Git</p>
+      <p><i class="devicon-github-plain colored"></i> Github</p>
+      <p><i class="devicon-trello-plain colored"></i> Trello</p>
+    </div>
+
+    <br class="clear" />
+
+    <div class="empty" id="code-samples"></div>
+
+    <h3>Code Snippets</h3>
     <hr />
 
     <div class="box">
@@ -132,59 +173,20 @@ end</code></pre>
 
     <br class="clear" />
 
-    <h3 id="web-apps">Web Apps</h3>
+    <div class="empty" id="projects"></div>
+
+    <h3 >Current Projects</h3>
     <hr />
 
     <div class="box">
-      <h4>App #1</h4>
+      <h4>Chess App</h4>
       <p>
         This is where the filler text would go, if I had any. And boy, it would be some fine filler. The fillest, if I could say so myself. You'd read it and think, "wow, this could be real text. It's just filler though? Shame."
       </p>
     </div>
 
     <div class="box">
-      <img src="images/testimg.jpg" class="full-width">
-    </div>
-
-    <br class="clear" />
-
-    <div class="box">
-      <img src="images/testimg.jpg" class="full-width">
-    </div>
-
-    <div class="box">
-      <h4>App #2</h4>
-      <p>
-        This is where the filler text would go, if I had any. And boy, it would be some fine filler. The fillest, if I could say so myself. You'd read it and think, "wow, this could be real text. It's just filler though? Shame."
-      </p>
-    </div>
-
-    <br class="clear" />
-
-    <h3 id="languages">Languages, Frameworks, &amp; Tools</h3>
-    <hr />
-
-    <div class="third-box">
-      <h4>Languages</h4>
-      <p>Ruby</p>
-      <p>Javascript</p>
-      <p>HTML 5</p>
-      <p>CSS 3</p>
-      <p>C#</p>
-    </div>
-
-    <div class="third-box">
-      <h4>Frameworks</h4>
-      <p>Ruby on Rails</p>
-      <p>Angular 4</p>
-      <p>Node.js</p>
-    </div>
-
-    <div class="third-box">
-      <h4>Tools</h4>
-      <p>Git + Github</p>
-      <p>Codeship</p>
-      <p>Trello</p>
+      <img src="images/chessimg.jpg" class="full-width">
     </div>
 
     <br class="clear" />
@@ -193,12 +195,17 @@ end</code></pre>
       <h3 class="contact-headline">Contact Me</h3>
       <hr class="white" />
 
-      <p>
-        <a href="mailto:ken@thefirehoseproject.com" class="contact-link">
-          tanner.tannerlevine@gmail.com
-        </a>
-      </p>
+      <center>
+        <a href="https://github.com/Kawameka" target="_blank"><img src="https://newmerator.github.io/blacktocat.png" class="circle" alt="Github"></a>
+        <a href="https://www.linkedin.com/in/tanner-levine/" target="_blank"><img src="http://vectorlogofree.com/wp-content/uploads/2014/07/linkedin-icon-vector.png" class="circle" alt="Linkedin"></a>
+        <a href="mailto:tanner.tannerlevine@gmail.com"><img src="images/gmail.png" class="circle" alt="Gmail"></a>
+      </center>
+
     </div>
 
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>
