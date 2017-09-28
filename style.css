@@ -9,7 +9,7 @@ body {
   background-image: url("images/white_bg.png");
 }
 
-.about {
+.top {
   width: 500px;
   margin-top: 15px;
   margin-left: auto;
@@ -17,19 +17,24 @@ body {
   text-align: center;
 }
 
-.about h1 {
+#about {
+  width: 650px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.top h1 {
   font-family: 'Rock Salt', cursive;
   font-size: 45px;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
-.about h2 {
+.top h2 {
   margin-top: 10px;
-}
-
-.about p {
-  font-size: 15px;
 }
 
 .self {
@@ -95,16 +100,12 @@ p {
   font-weight: bold;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-}
-
 li {
   display: inline-block;
   font-size: 18px;
   font-weight: bold;
   margin-top: 15px;
+  margin-right: 20px;
 }
 
 .circle {
@@ -117,10 +118,6 @@ li {
 .red {
   color: #C4473A;
 }
-
-a:hover {
-  color: #C4473A !important;
-  }
 
 ul {
   background-color: #202020;
@@ -137,4 +134,27 @@ ul {
 
 .filler {
   height: 25px;
+}
+
+button {
+  background:none;
+  border:none;
+  font-size:1em;
+  color:white;
+}
+
+button.btn:active{
+  color: #C4473A;
+}
+
+button:hover {
+  color: #C4473A !important;
+}
+
+.active {
+  color: #C4473A;
+}
+
+.active:hover {
+  color: white !important;
 }

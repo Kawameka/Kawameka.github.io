@@ -16,18 +16,41 @@
     $(document).ready(function(){
         $(".languages").click(function(){
             $("#languages").toggle();
+            $("#about").hide();
             $("#projects").hide();
         });
     });
     </script>
+
+    <script>
+    $(document).ready(function(){
+        $("#buttons .btn").click(function(){
+            $("#buttons .btn").removeClass('active');
+            $(this).toggleClass("active");
+        });
+    });
+    </script>
+
     <script>
     $(document).ready(function(){
         $(".projects").click(function(){
             $("#projects").toggle();
             $("#languages").hide();
+            $("#about").hide();
         });
     });
     </script>
+
+    <script>
+    $(document).ready(function(){
+        $(".about").click(function(){
+            $("#about").toggle();
+            $("#projects").hide();
+            $("#languages").hide();
+        });
+    });
+    </script>
+
     <script>
         $(document).ready(function ()
         {
@@ -41,13 +64,15 @@
   </head>
 
   <body>
-    <div class="about">
+    <div class="top">
       <img src="images/self.jpg" class="self" />
       <h1>Tanner Levine</h1>
       <h2 class="red">Web Developer</h2>
-      <hr />
-      <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
-    </div>
+      <!--<hr />
+      <a href="https://www.linkedin.com/in/tanner-levine/" target="_blank"><img src="images/linkedin.png" class="circle" alt="Linkedin"></a>
+      <a href="https://github.com/Kawameka" target="_blank"><img src="images/github.svg" class="circle" alt="Github"></a>
+      <a href="mailto:tanner.tannerlevine@gmail.com"><img src="images/gmail.png" class="circle" alt="Gmail"></a>-->
+    </div>  
 
     <div class="contactMe">
       <h5 class="contact-headline">Contact Me</h5>
@@ -60,13 +85,20 @@
 
     <br />
 
-    <center>
-      <ul>
-        <li class="languages"><a href="#" class="nav-link">LANGUAGES &amp; TOOLS</a></li>
-        <li class="projects"><a href="#" class="nav-link">PROJECTS</a></li>
-      </ul>
-    </center>
+    <div id="buttons">
+      <center>
+        <ul>
+          <li class="about"><button id="buttonAbout" class="btn active">ABOUT ME</button></li>
+          <li class="languages"><button id="buttonLanguages" class="btn">LANGUAGES &amp; TOOLS</button></li>
+          <li class="projects"><button id="buttonProjects" class="btn">PROJECTS</button></li>
+        </ul>
+      </center>
+    </div>
 
+    <div id="about">
+      <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
+      <p>Use the nav above to see more!</p>
+    </div>
 
     <div id="languages">
       <h3>Languages, Frameworks, &amp; Tools</h3>
@@ -74,11 +106,11 @@
 
       <div class="third-box">
         <h4>Languages</h4>
-        <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
         <p><i class="devicon-javascript-plain colored"></i> Javascript</p>
-        <p><i class="devicon-c-plain colored"></i> C</p>
         <p><i class="devicon-html5-plain colored"></i> HTML 5</p>
         <p><i class="devicon-css3-plain colored"></i> CSS 3</p>
+        <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
+        <p><i class="devicon-c-plain colored"></i> C</p>
       </div>
 
       <div class="third-box">
@@ -90,10 +122,10 @@
 
       <div class="third-box">
         <h4>Tools</h4>
-        <p><i class="devicon-git-plain colored"></i> Git</p>
+        <p><i class="devicon-heroku-plain colored"></i> Heroku</p>
         <p><i class="devicon-github-plain colored"></i> Github</p>
         <p><i class="devicon-trello-plain colored"></i> Trello</p>
-        <p><i class="devicon-heroku-plain colored"></i> Heroku</p>
+        <p><i class="devicon-git-plain colored"></i> Git</p>
       </div>
     </div>
 
