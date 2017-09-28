@@ -10,8 +10,8 @@ body {
 }
 
 .top {
-  width: 500px;
-  margin-top: 15px;
+  width: 650px;
+  margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -28,20 +28,21 @@ body {
 
 .top h1 {
   font-family: 'Rock Salt', cursive;
-  font-size: 45px;
+  font-size: 70px;
   margin-top: 10px;
   margin-bottom: 0;
 }
 
 .top h2 {
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 40px;
 }
 
 .self {
   border-radius: 50%;
   box-shadow: 5px 5px 5px grey;
   width: 270px;
-  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 hr {
@@ -123,13 +124,7 @@ ul {
   background-color: #202020;
   padding-bottom: 8px;
   padding-right: 35px;
-}
-
-.contactMe {
-  width: 200px;
-  position:absolute;
-  top:0;
-  right:0;
+  margin-top: 20px;
 }
 
 .filler {
@@ -145,6 +140,11 @@ button {
 
 button.btn:active{
   color: #C4473A;
+}
+
+button.btn:focus{
+  outline:none !important;
+  box-shadow: none !important;
 }
 
 button:hover {
