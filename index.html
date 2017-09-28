@@ -11,198 +11,125 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-    <link
-      rel="stylesheet"
-      href="prism-atom-dark.css"
-      type="text/css"
-      media="screen"
-    />
-
-    <script type="text/javascript" src="prism.js"></script>
-    <script type="text/javascript" src="prism.ruby.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".languages").click(function(){
+            $("#languages").toggle();
+            $("#projects").hide();
+        });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+        $(".projects").click(function(){
+            $("#projects").toggle();
+            $("#languages").hide();
+        });
+    });
+    </script>
+    <script>
+        $(document).ready(function ()
+        {
+          $("#languages").hide();
+          $("#projects").hide();
+        });
+    </script>
 
     <title>Tanner Levine</title>
     <meta name="description" content="Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.">
   </head>
 
   <body>
-    <nav class="navbar fixed-top justify-content-center" style="background-color: black;">
-      <ul>
-        <li class="nav-item"><a href="#about" class="nav-link">ABOUT ME</a></li>
-        <li class="nav-item"><a href="#languages" class="nav-link">LANGUAGES &amp; TOOLS</a></li>
-        <li class="nav-item"><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">PROJECTS</a></li>
-        
-        <li class="nav-item"><a href="#contact" class="nav-link">CONTACT ME</a></li>
-      </ul>
-    </nav>
-
-    <div class="empty" id="about"></div>
-
-    <div class="about-container">
-      <div class="about">
-        <img src="images/self.jpg" class="self" />
-        <h1>Tanner Levine</h1>
-        <h2 class="red">Web Developer + Software Engineer</h2>
-        <hr />
-        <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
-      </div>
+    <div class="about">
+      <img src="images/self.jpg" class="self" />
+      <h1>Tanner Levine</h1>
+      <h2 class="red">Web Developer</h2>
+      <hr />
+      <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
     </div>
 
-    <div class="empty" id="languages"></div>
-
-    <h3>Languages, Frameworks, &amp; Tools</h3>
-    <hr />
-
-    <div class="third-box">
-      <h4>Languages</h4>
-      <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
-      <p><i class="devicon-javascript-plain colored"></i> Javascript</p>
-      <p><i class="devicon-html5-plain colored"></i> HTML 5</p>
-      <p><i class="devicon-css3-plain colored"></i> CSS 3</p>
-      <p><i class="devicon-csharp-plain colored"></i> C#</p>
-    </div>
-
-    <div class="third-box">
-      <h4>Frameworks</h4>
-      <p><i class="devicon-rails-plain colored"></i> Ruby on Rails</p>
-      <p><i class="devicon-angularjs-plain colored"></i> Angular 4</p>
-      <p><i class="devicon-nodejs-plain colored"></i> Node.js</p>
-    </div>
-
-    <div class="third-box">
-      <h4>Tools</h4>
-      <p><i class="devicon-git-plain colored"></i> Git</p>
-      <p><i class="devicon-github-plain colored"></i> Github</p>
-      <p><i class="devicon-trello-plain colored"></i> Trello</p>
-    </div>
-
-    <br class="clear" />
-
-    <div class="empty" id="code-samples"></div>
-
-    <h3>Code Snippets</h3>
-    <hr />
-
-    <div class="box">
-      <h4>Finding a Collatz Sequence</h4>
-      <p>
-        This snippet is a function that returns the complete Collatz Sequence for a given number (num).
-      </p>
-
-  <pre><code class="language-ruby">def collatz(num, array = [num])
-  if num == 1
-    array
-  else
-    if num % 2 == 0
-      num = num / 2
-    else
-      num = 3 * num + 1
-    end
-  array &lt;&lt; num
-  collatz(num, array)
-  end
-end</code></pre>
-    </div>
-
-    <div class="box">
-      <h4>Depth First Binary Tree Search</h4>
-      <p>
-        This snippet is a function that searches a Binary Tree for a given value (search_param).
-      </p>
-
-      <pre><code class="language-ruby">def depth_first(node, search_param)
-  puts node.payload
-  if node.payload == search_param
-    return node.payload
-  else
-    node.children.each do |child|
-      value = depth_first(child)
-      if value == 11
-        return value
-      end
-    end
-  end
-end</code></pre>
-    </div>
-
-    <br class="clear" />
-
-    <div class="box">
-      <h4>Palindrome Check</h4>
-      <p>
-        This snippet is a function that determines whether a string is a palindrome or not.
-      </p>
-
-<pre><code class="language-ruby">def palindrome?( some_string )
-  _palindrome?( some_string, 0, some_string.length - 1 )
-end
-
-def _palindrome?( some_string, head_index, tail_index )
-  if head_index == tail_index || head_index + 1 == tail_index && some_string[head_index] == some_string[tail_index]
-    true 
-  else
-    if some_string[head_index] == some_string[tail_index]
-      _palindrome?(some_string, head_index + 1, tail_index - 1)
-    else
-      false
-    end
-  end 
-end</code></pre>
-    </div>
-
-    <div class="box">
-      <h4>Instantiating a Class Object</h4>
-      <p>
-        This snippet is a class that instantiates a new object of a person's first and last name.
-      </p>
-
-<pre><code class="language-ruby">class Person
-  attr_accessor :first_name, :last_name
-
-  def initialize(first_name, last_name)
-    @first_name = first_name
-    @last_name = last_name
-  end
-
-  def full_name
-    "#{@first_name} #{@last_name}"
-  end
-end</code></pre>
-    </div>
-
-    <br class="clear" />
-
-    <div class="empty" id="projects"></div>
-
-    <h3 >Current Projects</h3>
-    <hr />
-
-    <div class="box">
-      <h4>Chess App</h4>
-      <p>
-        A fully functioning Chess App made using Ruby on Rails and Javascript. Players can sign up, create a game, and play with another human.
-      </p>
-    </div>
-
-    <div class="box">
-      <img src="images/chessimg.jpg" class="full-width">
-    </div>
-
-    <br class="clear" />
-
-    <div class="contact" id="contact">
-      <h3 class="contact-headline">Contact Me</h3>
-      <hr class="white" />
-
+    <div class="contactMe">
+      <h5 class="contact-headline">Contact Me</h5>
       <center>
         <a href="https://www.linkedin.com/in/tanner-levine/" target="_blank"><img src="images/linkedin.png" class="circle" alt="Linkedin"></a>
         <a href="https://github.com/Kawameka" target="_blank"><img src="images/github.svg" class="circle" alt="Github"></a>
         <a href="mailto:tanner.tannerlevine@gmail.com"><img src="images/gmail.png" class="circle" alt="Gmail"></a>
       </center>
-
     </div>
 
+    <br />
+
+    <center>
+      <ul>
+        <li class="languages"><a href="#" class="nav-link">LANGUAGES &amp; TOOLS</a></li>
+        <li class="projects"><a href="#" class="nav-link">PROJECTS</a></li>
+      </ul>
+    </center>
+
+
+    <div id="languages">
+      <h3>Languages, Frameworks, &amp; Tools</h3>
+      <hr />
+
+      <div class="third-box">
+        <h4>Languages</h4>
+        <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
+        <p><i class="devicon-javascript-plain colored"></i> Javascript</p>
+        <p><i class="devicon-c-plain colored"></i> C</p>
+        <p><i class="devicon-html5-plain colored"></i> HTML 5</p>
+        <p><i class="devicon-css3-plain colored"></i> CSS 3</p>
+      </div>
+
+      <div class="third-box">
+        <h4>Frameworks</h4>
+        <p><i class="devicon-rails-plain colored"></i> Ruby on Rails</p>
+        <p><i class="devicon-angularjs-plain colored"></i> Angular 4</p>
+        <p><i class="devicon-nodejs-plain colored"></i> Node.js</p>
+      </div>
+
+      <div class="third-box">
+        <h4>Tools</h4>
+        <p><i class="devicon-git-plain colored"></i> Git</p>
+        <p><i class="devicon-github-plain colored"></i> Github</p>
+        <p><i class="devicon-trello-plain colored"></i> Trello</p>
+        <p><i class="devicon-heroku-plain colored"></i> Heroku</p>
+      </div>
+    </div>
+
+    <div id="projects">
+      <h3>Projects</h3>
+      <hr />
+
+      <div class="box">
+        <h4>Knight Classes</h4>
+        <p>
+          A fully functioning Chess App made using Ruby on Rails and Javascript. Players can sign up, create a game, and play with another human.
+        </p>
+      </div>
+
+      <div class="box">
+        <img src="images/chessimg.jpg" class="full-width">
+      </div>
+
+      <br class="clear" />
+
+      <div class="box">
+        <img src="images/forumexample.jpg" class="full-width">
+      </div>
+
+      <div class="box">
+        <h4>Jampost Forums</h4>
+        <p>
+          A forum for music lovers. (STILL IN DEVELOPMENT)
+        </p>
+      </div>
+    </div>
+
+
+    <br class="clear" />
+
+    <div class="filler"></div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
