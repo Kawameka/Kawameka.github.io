@@ -64,15 +64,17 @@
   </head>
 
   <body>
-    <div class="top">
-      
-      <h1>Tanner Levine</h1>
-      <h2 class="red">Full Stack Web Developer</h2>
-      <hr />
-      <a href="https://www.linkedin.com/in/tanner-levine/" target="_blank"><img src="images/linkedin.png" class="circle" alt="Linkedin"></a>
-      <a href="https://github.com/Kawameka" target="_blank"><img src="images/github.svg" class="circle" alt="Github"></a>
-      <a href="mailto:tanner.tannerlevine@gmail.com"><img src="images/gmail.png" class="circle" alt="Gmail"></a>
-    </div>  
+    <div class="container">
+      <div class="top col">
+        
+        <h1>Tanner Levine</h1>
+        <h2 class="red">Full Stack Web Developer</h2>
+        <hr />
+        <a href="https://www.linkedin.com/in/tanner-levine/" target="_blank"><img src="images/linkedin.png" class="circle" alt="Linkedin"></a>
+        <a href="https://github.com/Kawameka" target="_blank"><img src="images/github.svg" class="circle" alt="Github"></a>
+        <a href="mailto:tanner.tannerlevine@gmail.com"><img src="images/gmail.png" class="circle" alt="Gmail"></a>
+      </div>  
+    </div>
 
     <br />
 
@@ -87,65 +89,85 @@
     </div>
 
     <div id="about">
-      <img src="images/self.jpg" class="self" />
-      <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
+      <div class="container">
+        <div class="col">
+          <img src="images/self.jpg" class="self" />
+          <center>
+          <p>Tanner Levine is a burgeoning web developer with experience in Ruby, Rails, JavaScript, and building web applications.</p>
+          </center>
+        </div>
+      </div>
     </div>
 
     <div id="languages">
       <h3>Languages, Frameworks, &amp; Tools</h3>
       <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-sm third-box">
+            <h4>Languages</h4>
+            <p><i class="devicon-javascript-plain colored"></i> Javascript</p>
+            <p><i class="devicon-html5-plain colored"></i> HTML 5</p>
+            <p><i class="devicon-css3-plain colored"></i> CSS 3</p>
+            <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
+            <p><i class="devicon-c-plain colored"></i> C</p>
+          </div>
 
-      <div class="third-box">
-        <h4>Languages</h4>
-        <p><i class="devicon-javascript-plain colored"></i> Javascript</p>
-        <p><i class="devicon-html5-plain colored"></i> HTML 5</p>
-        <p><i class="devicon-css3-plain colored"></i> CSS 3</p>
-        <p><i class="devicon-ruby-plain colored"></i> Ruby</p>
-        <p><i class="devicon-c-plain colored"></i> C</p>
-      </div>
+          <div class="col-sm third-box">
+            <h4>Frameworks</h4>
+            <p><i class="devicon-rails-plain colored"></i> Ruby on Rails</p>
+            <p><i class="devicon-angularjs-plain colored"></i> Angular 4</p>
+            <p><i class="devicon-nodejs-plain colored"></i> Node.js</p>
+          </div>
 
-      <div class="third-box">
-        <h4>Frameworks</h4>
-        <p><i class="devicon-rails-plain colored"></i> Ruby on Rails</p>
-        <p><i class="devicon-angularjs-plain colored"></i> Angular 4</p>
-        <p><i class="devicon-nodejs-plain colored"></i> Node.js</p>
-      </div>
-
-      <div class="third-box">
-        <h4>Tools</h4>
-        <p><i class="devicon-heroku-plain colored"></i> Heroku</p>
-        <p><i class="devicon-github-plain colored"></i> Github</p>
-        <p><i class="devicon-trello-plain colored"></i> Trello</p>
-        <p><i class="devicon-git-plain colored"></i> Git</p>
+          <div class="col-sm third-box">
+            <h4>Tools</h4>
+            <p><i class="devicon-heroku-plain colored"></i> Heroku</p>
+            <p><i class="devicon-github-plain colored"></i> Github</p>
+            <p><i class="devicon-trello-plain colored"></i> Trello</p>
+            <p><i class="devicon-git-plain colored"></i> Git</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="projects">
       <h3>Projects</h3>
       <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 box">
+            <h4>Knight Classes</h4>
+            <p>
+              A fully functioning Chess App made using Ruby on Rails and Javascript. Players can sign up, create a game, and play with another human.
+            </p>
+          </div>
 
-      <div class="box">
-        <h4>Knight Classes</h4>
-        <p>
-          A fully functioning Chess App made using Ruby on Rails and Javascript. Players can sign up, create a game, and play with another human.
-        </p>
-      </div>
+          <div class="col-md-6 box">
+            <figure>
+              <a href="https://theknightclass.herokuapp.com/" target="_blank"><img src="images/chessimg.jpg" class="full-width"></a>
+              <figcaption>Click the Image!</figcaption>
+            </figure>
+          </div>
+        </div>
 
-      <div class="box">
-        <img src="images/chessimg.jpg" class="full-width">
-      </div>
+        <br class="clear" />
 
-      <br class="clear" />
+        <div class="row">
+          <div class="col-md-6 box">
+            <!--<figure>-->
+              <img src="images/forumexample.jpg" class="full-width">
+              <!--<figcaption>Click the Image!</figcaption>
+            </figure>-->
+          </div>
 
-      <div class="box">
-        <img src="images/forumexample.jpg" class="full-width">
-      </div>
-
-      <div class="box">
-        <h4>Jampost Forums</h4>
-        <p>
-          A forum for music lovers. (STILL IN DEVELOPMENT)
-        </p>
+          <div class="col-md-6 box">
+            <h4>Jampost Forums</h4>
+            <p>
+              A forum for music lovers built using Angular 4 and Google Firebase.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
